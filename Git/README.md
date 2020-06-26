@@ -33,3 +33,7 @@ git commit -m "代码提交信息"
 ```js
 git push origin master
 ```
+
+## git的状态
+
+`` git status``
