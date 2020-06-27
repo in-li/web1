@@ -19,7 +19,7 @@
 + git提交到本地仓库
 
 ```js
-git add *
+git add * / .
 ```
 
 + git代码提交信息
