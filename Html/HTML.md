@@ -42,7 +42,9 @@ strong 和 em 标签嵌套 <strong><em></em></strong> or <em><strong></strong></
 
 + address标签
 
+```html
 斜体 用处不大 了解
+```
 
 + div标签
 
@@ -54,4 +56,40 @@ strong 和 em 标签嵌套 <strong><em></em></strong> or <em><strong></strong></
 
 ```html
 容器
+```
+
++ html编码
+
+```html
+&nbsp; 文本分割符 空格，&lt; < 小于号 &gt; > 大于号
+```
+
++ 回车
+
+```html
+<br>
+```
+
++ 有序列表（用处不大）
+
+```html
+<ol><li></li></ol> <ol type="a"> 内容将按abcd来排序 五种排序方式1 a A i I  倒序加属性reversed="reversed"  从第2个开始排 start="2"
+```
+
++ 无序列表
+
+```html
+<ul><li></li></ul> type="disc"实心圆 "circle"空心圆 "square"方块 导航栏最好的骨架
+```
+
++ img标签
+
+```html
+<img src=""> 1.网上url 2.本地绝对路径 3.本地相对路径 alt="" 图片占位符 当图片地址发生错误 展示alt里的内容 title=""图片提示符 
+```
+
++ a标签
+
+```html
+<a href=""></a> href超文本引用 1.超链接  2.锚点<div id="ab">你好</div> <a href="#ab">谢谢</a>点击 谢谢 跳转到 你好 3.打电话 href="tel:1588......."
 ```
