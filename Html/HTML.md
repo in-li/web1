@@ -91,5 +91,23 @@ strong 和 em 标签嵌套 <strong><em></em></strong> or <em><strong></strong></
 + a标签
 
 ```html
-<a href=""></a> href超文本引用 1.超链接  2.锚点<div id="ab">你好</div> <a href="#ab">谢谢</a>点击 谢谢 跳转到 你好 3.打电话 href="tel:1588......."
+<a href=""></a> href超文本引用 
+1.超链接
+2.锚点<div id="ab">你好</div> <a href="#ab">谢谢</a>点击 谢谢 跳转到 你好
+3.打电话 href="tel:1588......."
+```
+
++ form表单标签
+
+```html
+ <form mothod="get/post" action="">
+      <p>
+          username:<input type="text" name="username"> name为数据名
+      </p>
+      <p>
+          password:<input type="password" name="password"> 
+      </p>
+      <input type="submit">
+      type="radio" 选择 value=""数据值
+ </form>
 ```
