@@ -1,4 +1,4 @@
-# 标签
+# html标签
 
 + lang=“en”
 
@@ -13,7 +13,7 @@
 + h标签
 
 ```html
-<h></h> h1-h6 标题标签 一级到六级标签大小逐次减小
+<h1></h1> h1-h6 标题标签 一级到六级标签大小逐次减小
 ```
 
 + strong标签
@@ -100,7 +100,7 @@ strong 和 em 标签嵌套 <strong><em></em></strong> or <em><strong></strong></
 + form表单标签
 
 ```html
- <form mothod="get/post" action="">
+ <form mothod="get/post" action="">action 接收地址
       <p>
           username:<input type="text" name="username"> name为数据名
       </p>
@@ -108,6 +108,19 @@ strong 和 em 标签嵌套 <strong><em></em></strong> or <em><strong></strong></
           password:<input type="password" name="password"> 
       </p>
       <input type="submit">
-      type="radio" 选择 value=""数据值
+      type="radio"单选框 要想做成选择题 name属性要一样 value=""数据值 
+      checked="checked"默认选中
  </form>
+```
+
++ select标签
+
+```html
+<select><option></option></select>下拉菜单
+```
+
++ 注释 调试
+
+```html
+<!--  --> ctrl+?快捷键 
 ```
