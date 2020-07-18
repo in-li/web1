@@ -110,5 +110,17 @@ border:border-width border-style:solid 实线 dashed 虚线
 
 width： px;高
 
-heght:  px;宽
+height:  px;宽
+
+text-align: center right left; 对齐方式
+
+line-height:  px;单行文本高度 
+
+text-indent:2em;首行缩进
+
+text-decoration:underline line-through;元素的文本修饰
+
+cursor: pointer(手形)  显示的光标的类型（形状）
+
+hover 鼠标指针浮动在其上的元素
 ```
