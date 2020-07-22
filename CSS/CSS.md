@@ -273,3 +273,178 @@ CSS属性中的 background-color 会设置元素的背景色, 属性的值为颜
 <color>
 一个描述背景统一颜色的 CSS <color> 值。即使一个或几个的 background-image 被定义，如果图像是不透明的，通过透明度该颜色也能影响到渲染。在 CSS 中，transparent 是一种颜色。
 ```
+
++ background-image
+
+```css
+CSS background-image 属性用于为一个元素设置一个或者多个背景图像。
+
+语法
+
+每个背景图像被明确规定为关键字 none 或是一个 <image> 值。
+
+可以提供由逗号分隔的多个值来指定多个背景图像：
+
+background-image:
+  linear-gradient(to bottom, rgba(255,255,0,0.5), rgba(0,0,255,0.5)),
+  url('https://mdn.mozillademos.org/files/7693/catfront.png');
+
+值
+
+none
+是一个表示无背景图的关键字。
+
+<image>
+<image> 用来标记将要显示的图片. 支持多背景设置，背景之间以逗号隔开.
+```
+
++ background-repeat
+
+```css
+ background-repeat CSS 属性定义背景图像的重复方式。背景图像可以沿着水平轴，垂直轴，两个轴重复，或者根本不重复。
+
+ 语法
+
+/* 单值语法 */
+background-repeat: repeat-x;
+background-repeat: repeat-y;
+background-repeat: repeat;
+background-repeat: space;
+background-repeat: round;
+background-repeat: no-repeat;
+
+/* 双值语法: 水平horizontal | 垂直vertical */
+background-repeat: repeat space;
+background-repeat: repeat repeat;
+background-repeat: round space;
+background-repeat: no-repeat round;
+
+background-repeat: inherit;
+
+值
+
+repeat	
+图像会按需重复来覆盖整个背景图片所在的区域. 最后一个图像会被裁剪, 如果它的大小不合适的话.
+
+space	
+图像会尽可能得重复, 但是不会裁剪. 第一个和最后一个图像会被固定在元素(element)的相应的边上, 同时空白会均匀地分布在图像之间. background-position属性会被忽视, 除非只有一个图像能被无裁剪地显示. 只在一种情况下裁剪会发生, 那就是图像太大了以至于没有足够的空间来完整显示一个图像.
+
+round	
+随着允许的空间在尺寸上的增长, 被重复的图像将会伸展(没有空隙), 直到有足够的空间来添加一个图像. 当下一个图像被添加后, 所有的当前的图像会被压缩来腾出空间. 例如, 一个图像原始大小是260px, 重复三次之后, 可能会被伸展到300px, 直到另一个图像被加进来. 这样他们就可能被压缩到225px.
+
+译者注: 关键是浏览器怎么计算什么时候应该添加一个图像进来, 而不是继续伸展.
+
+no-repeat	
+图像不会被重复(因为背景图像所在的区域将可能没有完全被覆盖). 那个没有被重复的背景图像的位置是由background-position属性来决定.
+```
+
++ background-position
+
+```css
+background-position 为每一个背景图片设置初始位置。 这个位置是相对于由 background-origin 定义的位置图层的。
+
+语法
+
+/* Keyword values */
+background-position: top;
+background-position: bottom;
+background-position: left;
+background-position: right;
+background-position: center;
+
+/* <percentage> values */
+background-position: 25% 75%;
+
+/* <length> values */
+background-position: 0 0;
+background-position: 1cm 2cm;
+background-position: 10ch 8em;
+
+/* Multiple images */
+background-position: 0 0, center;
+
+/* Edge offsets values */
+background-position: bottom 10px right 20px;
+background-position: right 3em bottom 10px;
+background-position: bottom 10px right;
+background-position: top right 10px;
+
+/* Global values */
+background-position: inherit;
+background-position: initial;
+background-position: unset; 
+
+值
+
+关键字 center，用来居中背景图片。
+关键字 top, left, bottom, right 中的一个。用来指定把这个项目（原文为 item）放在哪一个边缘。另一个维度被设置成 50%，所以这个项目（原文为 item）被放在指定边缘的中间位置。
+<length> 或 <percentage>。指定相对于左边缘的 x 坐标，y 坐标被设置成 50%。
+如果一个值是  top 或  bottom，那么另一个值不应该是 top 或 bottom。
+如果一个值是  left 或   right，那么另一个值不应该是 left 或 right 。
++50px（将图片的左边界对齐容器的中线）
+0px（图片的左边界与容器左边界重合）
+-100px（将图片相对容器左移100px，这意味着图片中部的100px内容将出现在容器中）
+-200px（将图片相对容器左移200px，这意味着图片右部分的100px内容将出现在容器中）
+-250px（将图片相对容器左移250px，这意味着图片的右边界对齐容器的中线）
+    另外需要注意，如果背景图片的大小和容器一样，那设置百分比的值将永远无效，因为“容器和图片的差”为0（图片永远填满容器，并且图片的相对位置和容器的相对位置永远重合）。在这种情况下，需要为偏移使用绝对值（例如px）。
+```
+
++ background-attachment
+
+```css
+background-attachment CSS 属性决定背景图像的位置是在视口内固定，或者随着包含它的区块滚动。
+
+值
+
+fixed
+此关键属性值表示背景相对于视口固定。即使一个元素拥有滚动机制，背景也不会随着元素的内容滚动。
+local
+此关键属性值表示背景相对于元素的内容固定。如果一个元素拥有滚动机制，背景将会随着元素的内容滚动， 并且背景的绘制区域和定位区域是相对于可滚动的区域而不是包含他们的边框。
+scroll
+此关键属性值表示背景相对于元素本身固定， 而不是随着它的内容滚动（对元素边框是有效的）。
+```
+
++ background-size
+
+```css
+background-size 设置背景图片大小。图片可以保有其原有的尺寸，或者拉伸到新的尺寸，或者在保持其原有比例的同时缩放到元素的可用空间的尺寸。
+
+值
+
+单张图片的背景大小可以使用以下三种方法中的一种来规定：
+使用关键词 contain
+使用关键词 cover
+设定宽度和高度值
+```
+
++ background-clip
+
+```css
+background-clip  设置元素的背景（背景图片或颜色）是否延伸到边框、内边距盒子、内容盒子下面。
+
+值
+
+border-box
+背景延伸至边框外沿（但是在边框下层）。
+padding-box
+背景延伸至内边距（padding）外沿。不会绘制到边框处。
+content-box
+背景被裁剪至内容区（content box）外沿。
+text 
+背景被裁剪成文字的前景色。
+```
+
++ background-origin
+
+```css
+background-origin 规定了指定背景图片background-image 属性的原点位置的背景相对区域.
+
+值
+
+border-box
+背景图片的摆放以border区域为参考
+padding-box
+背景图片的摆放以padding区域为参考
+content-box
+背景图片的摆放以content区域为参考
+```
